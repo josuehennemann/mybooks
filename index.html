@@ -1,0 +1,195 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style type="text/css">
+            * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
+    html, body {overflow-x: hidden;}
+
+    body {
+        font: 100% arial, verdana, tahoma, sans-serif;
+        color: #FFF;
+        background-color: #90A4AE;
+    }
+
+    header {
+        background: #B0BEC5;
+        padding: 30px;
+        overflow: hidden;
+    }
+    header h1 {
+        text-align: center;
+    }
+    header input {
+        float: right;
+        padding: 10px;
+        width: 200px;
+        border: none;
+    }
+
+    .main {
+        padding: 30px;
+    }
+    .main p {
+        font-size: .9em;
+        line-height: 1.2em;
+        margin-bottom: 20px;
+    }
+    .menu-anchor {
+        width: 40px;
+        height: 32px;
+        float: left;
+        position: relative;
+        text-indent: -9999px;
+        overflow: hidden;
+        cursor: pointer;
+        background: #FFF;
+    }
+    .menu-anchor:before {
+        content: "";
+        display: block;
+        margin: 7px auto;
+        width: 70%;
+        height: 0.25em;
+        background: #B0BEC5;
+        box-shadow: 
+        0 .45em 0 0 #B0BEC5,
+        0 .9em 0 0 #B0BEC5;
+    }
+
+    .menu-active .menu-anchor {background: #FFF}
+
+    menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 53px;
+        height: 100%;
+        padding-top: 10px;
+        background: #00838F;
+        box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.3)
+    }
+
+    menu ul {
+        list-style-type: none;
+        padding-left: 12px;
+    }
+
+    menu li a {
+        display: block;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        margin: 0 10px;
+        padding: 10px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    menu li a:hover {
+        background: #43A047;
+        color: #FFFFFF;
+    }
+
+
+    /*
+        Aqui você esconde o menu para fora da tela 
+        O valor é exatamente a largura da sidebar
+    */
+    menu {
+        -webkit-transform: translateX(-53px);
+        -moz-transform: translateX(-53px);
+        -ms-transform: translateX(-53px);
+        transform: translateX(-53px);
+    }
+
+    /*
+        Essa é a posição original do HEADER e do MAIN
+    */
+    header, .main {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    /*
+       Com a classe menu-active na tag HTML
+    */
+    .menu-active menu {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .menu-active header, 
+    .menu-active .main {
+        -webkit-transform: translateX(53px);
+        -moz-transform: translateX(53px);
+        -ms-transform: translateX(53px);
+        transform: translateX(53px);
+    }
+
+    menu ul li div {
+            background: url('icons.svg') no-repeat;
+            height: 38px;
+            width: 38px;
+            -webkit-transform-origin: top left; -o-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left;
+            margin-bottom: 5px;
+    }
+    
+    .icon-home {
+        background-position: -2px 0px;
+    }
+    .icon-add {
+        background-position: -40px 0px;
+    }
+    .icon-list {
+        background-position: -80px 0px;
+    } 
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-anchor').on('click touchstart', function(e){
+                $('html').toggleClass('menu-active');
+                e.preventDefault();
+            });
+        });
+        </script>
+    </head>
+    <body>
+
+    <header>
+        <span class="menu-anchor"></span>
+        <h1>SITE DE EXEMPLO</h1>
+    </header>
+
+    <menu>
+        <ul>
+            <li> <div class="icon-home"></div> <span>Home</span></li>
+            <li><div class="icon-add"></div> </li>
+            <li><div class="icon-list"></div> </li>
+        </ul>
+    </menu>
+
+    <section class="main">
+        <div class="post">
+            <h1>Um título</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus neque, adipiscing malesuada lectus non, ullamcorper gravida augue. Donec rutrum augue eu dolor cursus, id luctus felis tincidunt. Pellentesque consectetur luctus dui quis adipiscing. Donec volutpat varius nulla, pretium vestibulum quam imperdiet et. Sed semper a erat nec mattis. In elementum nibh mauris, sit amet aliquet quam pharetra in. Nullam magna mauris, tempus a tellus varius, hendrerit mattis neque. Duis lacinia commodo magna eget scelerisque. Integer molestie fermentum nisl a bibendum. Donec congue, diam nec commodo elementum, tortor mauris vestibulum erat, adipiscing aliquet enim quam sit amet nulla. Maecenas dignissim varius mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ligula lectus, rhoncus eget scelerisque in, consectetur eu nulla. Vestibulum eu sem massa.</p>
+        </div>
+        <div class="post">
+            <h1>Pellentesque consectetur luctus</h1>
+            <p>Nullam magna mauris, tempus a tellus varius, hendrerit mattis neque. Duis lacinia commodo magna eget scelerisque. Integer molestie fermentum nisl a bibendum. Donec congue, diam nec commodo elementum, tortor mauris vestibulum erat, adipiscing aliquet enim quam sit amet nulla. Maecenas dignissim varius mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ligula lectus, rhoncus eget scelerisque in, consectetur eu nulla. Vestibulum eu sem massa.</p>
+        </div>
+        <div class="post">
+            <h1>Nullam magna mauris</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus neque, adipiscing malesuada lectus non, ullamcorper gravida augue. Donec rutrum augue eu dolor cursus, id luctus felis tincidunt. Pellentesque consectetur luctus dui quis adipiscing. Donec volutpat varius nulla, pretium vestibulum quam imperdiet et. Sed semper a erat nec mattis. In elementum nibh mauris, sit amet aliquet quam pharetra in. Maecenas ligula lectus, rhoncus eget scelerisque in, consectetur eu nulla. Vestibulum eu sem massa.</p>
+        </div>
+    </section>
+    </body>
+    </html>

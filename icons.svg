@@ -1,0 +1,44 @@
+<svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="6.999988" width="20.749955" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_13">
+   <g transform="matrix(0.369158, 0, 0, 0.406999, -17.2747, -59.6233)" id="svg_6"/>
+   <g transform="matrix(0.369158, 0, 0, 0.406999, -17.2747, -59.6233)" id="svg_5">
+    <g id="svg_8">
+     <polyline id="svg_9" stroke-width="5" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#231F20" points="53.49557113647461,187.92610168457028 94.05259323120117,158.78010559082028 134.0015525817871,187.92610168457028 " fill="none"/>
+     <path id="svg_10" stroke-width="5" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#231F20" fill="none" d="m82.475571,231.10112l0,-25.387009c0,0 3.34198,-5.843002 10.42804,-5.843002c7.083984,0 10.424988,5.843002 10.424988,5.843002l0,25.387009"/>
+     <polyline id="svg_11" stroke-width="5" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#231F20" points="68.33658981323242,175.1351165771484 68.33658981323242,158.78010559082028 77.43259811401367,158.78010559082028 77.43259811401367,169.39710998535153 " fill="none"/>
+     <path id="svg_12" stroke-width="5" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke="#231F20" fill="none" d="m128.538544,183.940109l0,42.867004c0,3.768997 -3.05394,6.821991 -6.821945,6.821991l-55.936035,0c-3.768993,0 -6.821972,-3.053986 -6.821972,-6.821991l0,-42.807007"/>
+    </g>
+   </g>
+  </g>
+  <g id="svg_24">
+   <g transform="matrix(0.988876, 0, 0, 0.727272, 2.80213, 4.83839)" id="svg_18">
+    <path id="svg_19" d="m68.144409,40.763889c0,0.600002 -0.400017,1 -1,1l-24.000034,0c-0.599998,0 -1,-0.399998 -1,-1l0,-37.999999c0,-0.6 0.400002,-1 1,-1l13,0l0,-2l-13,0c-1.699989,0 -3,1.3 -3,3l0,37.999999c0,1.700001 1.300011,3 3,3l24.000034,0c1.700005,0 3,-1.299999 3,-3l0,-26.999999l-2,0l0,26.999999z"/>
+    <polygon id="svg_20" points="64.14439296722412,5.76388692855835 64.14439296722412,-0.236113041639328 62.14437770843506,-0.236113041639328 62.14437770843506,5.76388692855835 56.14437389373779,5.76388692855835 56.14437389373779,7.76388692855835 62.14437770843506,7.76388692855835 62.14437770843506,13.763887405395508 64.14439296722412,13.763887405395508 64.14439296722412,7.76388692855835 70.14440441131592,7.76388692855835 70.14440441131592,5.76388692855835 "/>
+    <rect id="svg_21" y="16.763887" x="48.144452" width="10" height="2"/>
+    <rect id="svg_22" y="24.763887" x="48.144452" width="14" height="2"/>
+    <rect id="svg_23" y="32.763887" x="48.144452" width="10" height="2"/>
+   </g>
+  </g>
+  <defs>
+   <style>.cls-1{fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px;}</style>
+  </defs>
+  <g id="svg_88">
+   <g transform="matrix(0.994429, 0, 0, 1.02778, 12.8061, 7.25865)" id="svg_79">
+    <rect stroke-width="0" id="svg_81" y="-2.278689" x="69.581506" width="30" ry="2" rx="2" height="30" class="cls-1"/>
+    <line stroke-width="0" id="svg_82" y2="5.721311" y1="5.721311" x2="95.581506" x1="79.581506" class="cls-1"/>
+    <line stroke-width="0" id="svg_83" y2="12.721311" y1="12.721311" x2="95.581506" x1="79.581506" class="cls-1"/>
+    <line stroke-width="0" id="svg_84" y2="19.721311" y1="19.721311" x2="95.581506" x1="79.581506" class="cls-1"/>
+    <rect stroke-width="0" id="svg_85" y="4.721311" x="74.581506" width="2" height="2" class="cls-1"/>
+    <rect stroke-width="0" id="svg_86" y="11.721311" x="74.581506" width="2" height="2" class="cls-1"/>
+    <rect stroke-width="0" id="svg_87" y="18.721311" x="74.581506" width="2" height="2" class="cls-1"/>
+   </g>
+  </g>
+ </g>
+</svg>
