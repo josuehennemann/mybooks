@@ -1,38 +1,29 @@
-     * {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Isto é necessário para não haver rolagens horizontais quando movermos os elementos */
-    html, body {overflow-x: hidden;}
-
     body {
         font: 100% arial, verdana, tahoma, sans-serif;
         color: #FFF;
-        background: linear-gradient(179deg, rgba(0,128,0,1) 11%, rgba(5,148,1,1) 30%, rgba(12,173,3,1) 52%, rgba(12,173,3,1) 94%);    
+        background: linear-gradient(179deg, rgba(0, 128, 0, 1) 11%, rgba(5, 148, 1, 1) 30%, rgba(12, 173, 3, 1) 52%, rgba(12, 173, 3, 1) 94%);
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
-
     header {
-        padding: 30px;
+        display: table;
+        padding-top: 15px;
+        top: 0;
+        padding-left: 30px;
         overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 36px;
+        display: block;
+        border-bottom: 1px solid;
+        background: linear-gradient(179deg, rgba(0, 128, 0, 1) 11%, rgba(5, 148, 1, 1) 30%, rgba(12, 173, 3, 1) 52%, rgba(12, 173, 3, 1) 94%);
     }
-    header h1 {
-        text-align: center;
-    }
-    header input {
-        float: right;
-        padding: 10px;
-        width: 200px;
-        border: none;
-    }
-
-    .main {
-        padding: 30px;
-    }
-    .main p {
-        font-size: .9em;
-        line-height: 1.2em;
-        margin-bottom: 20px;
+    .title {
+        font-size: 25px;
+        margin-top: -7px;
+        width: 100%;
+        margin-left: 30%;
     }
     .menu-anchor {
         width: 40px;
@@ -42,105 +33,112 @@
         text-indent: -9999px;
         overflow: hidden;
         cursor: pointer;
-        background: #81C784;
     }
     .menu-anchor:before {
         content: "";
         display: block;
-        margin: 7px auto;
         width: 70%;
         height: 0.25em;
         background: #FFFFFF;
-        box-shadow: 
-        0 .45em 0 0 #FFFFFF,
-        0 .9em 0 0 #FFFFFF;
+        box-shadow: 0 .45em 0 0 #FFFFFF, 0 .9em 0 0 #FFFFFF;
     }
-
     menu {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
-        width: 53px;
+        width: 80%;
         height: 100%;
-        padding-top: 10px;
+        padding-top: 15px;
         background: #81C784;
-        box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.3)
+        box-shadow: inset -5px -10px 10px 0 rgba(0, 0, 0, .3);
+        display: none;
+        margin: 0;
+        padding-left: 0;
     }
-
+    .menu-active {
+        display: block;
+        z-index: 2;
+    }
     menu ul {
         list-style-type: none;
         padding-left: 12px;
     }
-
-    menu li a {
-        display: block;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        margin: 0 10px;
-        padding: 10px;
-        color: #FFFFFF;
-        text-decoration: none;
+    menu ul >:first-child {
+        text-align: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid;
+        min-height: 36px;
+        font-size: 25px;
+        margin-top: -7px;
     }
-
-    menu li a:hover {
+    menu li:hover {
         background: #43A047;
         color: #FFFFFF;
+    }    
+    menu ul li div:first-child {
+        background: url('icons.svg') no-repeat;
+        height: 38px;
+        width: 38px;
+        -webkit-transform-origin: top left;
+        -o-transform-origin: top left;
+        -ms-transform-origin: top left;
+        transform-origin: top left;
+        margin-bottom: 5px;
+        float: left;
     }
-
-
-    /*
-        Aqui você esconde o menu para fora da tela 
-        O valor é exatamente a largura da sidebar
-    */
-    menu {
-        -webkit-transform: translateX(-53px);
-        -moz-transform: translateX(-53px);
-        -ms-transform: translateX(-53px);
-        transform: translateX(-53px);
+    menu ul li div:last-child {
+      clear: both;
     }
-
-    /*
-        Essa é a posição original do HEADER e do MAIN
-    */
-    header, .main {
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    /*
-       Com a classe menu-active na tag HTML
-    */
-    .menu-active menu {
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    .menu-active header, 
-    .menu-active .main {
-        -webkit-transform: translateX(53px);
-        -moz-transform: translateX(53px);
-        -ms-transform: translateX(53px);
-        transform: translateX(53px);
-    }
-
-    menu ul li div {
-            background: url('icons.svg') no-repeat;
-            height: 38px;
-            width: 38px;
-            -webkit-transform-origin: top left; -o-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left;
-            margin-bottom: 5px;
-    }
-    
     .icon-home {
         background-position: -2px 0px;
     }
     .icon-add {
-        background-position: -40px 0px;
+        background-position: -40px 0px !important;
     }
     .icon-list {
-        background-position: -80px 0px;
-    } 
+        background-position: -80px 0px !important;
+    }
+    .text {
+  position: relative;
+  width: 131px;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 16px;
+  color: #5c6d7d;
+  margin-left: 20px;
+
+  }
+  /*   .text {
+    position: relative;
+    top: -67px;
+    left: 66px;
+    width: 131px;
+    height: 36px;
+    padding: 25px 5px 5px 19px;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #fff;
+    font-size: 16px;
+    color: #5c6d7d;
+  }*/
+    #overlay {
+        z-index: 1;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(33, 33, 33, 0.8);
+        display: none;
+    }
+    .remove-overflow {
+        overflow-y: hidden;
+    }
+    .main {
+        padding: 30px;
+        margin-top: 60px;
+    }
+    .main p {
+        font-size: .9em;
+        line-height: 1.2em;
+        margin-bottom: 20px;
+    }

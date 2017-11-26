@@ -6,28 +6,50 @@
         <script type="text/javascript">
         $(document).ready(function(){
             $('.menu-anchor').on('click touchstart', function(e){
-                $('html').toggleClass('menu-active');
+                $('menu').toggleClass('menu-active');
+                $("#overlay").toggle();
+                 $('body').toggleClass('remove-overflow');
                 e.preventDefault();
             });
+            $("#overlay").on('click touchstart', function(e){  
+                closeMenu();
+            });
+              
         });
+        function closeMenu(){
+                $('menu').removeClass('menu-active');
+                $("#overlay").toggle();    
+                $('body').toggleClass('remove-overflow');
+        }
         </script>
     </head>
     <body>
-
+    <div id="overlay"></div>
     <header>
-        <span class="menu-anchor"></span>
-        <h1>My Books</h1>
+        <div class="menu-anchor"></div>
+        <div class="title"> Titulo</div>
     </header>
-
+    <div style="clear:both;"></div>
     <menu>
         <ul>
-            <li> <div class="icon-home"></div></li>
-            <li><div class="icon-add"></div> </li>
-            <li><div class="icon-list"></div> </li>
+            <li> <span>My books</span></li>  
+            <li> 
+                <div class="icon-home"></div>
+                <div class="text"> Home </div>
+            </li>
+            <li>
+                <div class="icon-add"></div> 
+                <div class="text"> Novo </div>
+            </li>
+            <li>
+                <div class="icon-list"></div> 
+                <div class="text"> Biblioteca </div> 
+            </li>
         </ul>
     </menu>
 
     <section class="main">
+
         <div class="post">
             <h1>Um título</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus neque, adipiscing malesuada lectus non, ullamcorper gravida augue. Donec rutrum augue eu dolor cursus, id luctus felis tincidunt. Pellentesque consectetur luctus dui quis adipiscing. Donec volutpat varius nulla, pretium vestibulum quam imperdiet et. Sed semper a erat nec mattis. In elementum nibh mauris, sit amet aliquet quam pharetra in. Nullam magna mauris, tempus a tellus varius, hendrerit mattis neque. Duis lacinia commodo magna eget scelerisque. Integer molestie fermentum nisl a bibendum. Donec congue, diam nec commodo elementum, tortor mauris vestibulum erat, adipiscing aliquet enim quam sit amet nulla. Maecenas dignissim varius mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ligula lectus, rhoncus eget scelerisque in, consectetur eu nulla. Vestibulum eu sem massa.</p>
