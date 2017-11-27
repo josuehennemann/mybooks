@@ -78,7 +78,13 @@
         color: #FFFFFF;
     }    
     menu ul li div:first-child {
-        background: url('icons.svg') no-repeat;
+        float: left;
+    }
+    menu ul li div:last-child {
+      clear: both;
+    }
+    .icon{
+        background: url('file:///android_asset/icons.svg') no-repeat;
         height: 38px;
         width: 38px;
         -webkit-transform-origin: top left;
@@ -86,10 +92,6 @@
         -ms-transform-origin: top left;
         transform-origin: top left;
         margin-bottom: 5px;
-        float: left;
-    }
-    menu ul li div:last-child {
-      clear: both;
     }
     .icon-home {
         background-position: -2px 0px;
@@ -99,6 +101,12 @@
     }
     .icon-list {
         background-position: -80px 0px !important;
+    }
+    .icon-forbidden {
+        background-position: -120px 0px !important;
+    }
+    .icon-settings {
+        background-position: -140px 0px !important;
     }
    .text {
     position: relative;
@@ -135,7 +143,16 @@
     }
     .content-grid{
         display: inline-block;
-        width: 240px;
+        width: 55%;
         margin-left: 10px;
         vertical-align: top;
+    }
+    .image-book{
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+
+    }
+    .item-list{
+        border-bottom: 1px solid;
     }

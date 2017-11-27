@@ -1,10 +1,24 @@
     <!DOCTYPE html>
     <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="file:///android_asset/style.css">
+        <script type="text/javascript" src="file:///android_asset/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="file:///android_asset/jquery.mobile-1.4.5.min.js"></script>
+     
+        <script type="text/javascript" src="file:///android_asset/jquery-utils.js"></script>  
         <script type="text/javascript">
         $(document).ready(function(){
+          var itemsMenu = [
+                    {title:true,content:"Titulo"},
+                    {title:false,content:"Home", classIcon:"icon-home"},
+                    {title:false,content:"Adicionar", classIcon:"icon-add"},
+                    {title:false,content:"Biblioteca", classIcon:"icon-list"},
+                    {title:false,content:"Configurações", classIcon:"icon-Settings"},
+                    ];
+
+            $("menu").menu({classText:"text",classIcon:"icon", items:itemsMenu});
+            
+            
             $('.menu-anchor').on('click touchstart', function(e){
                 $('menu').toggleClass('menu-active');
                 $("#overlay").toggle();
@@ -31,35 +45,18 @@
     </header>
     <div style="clear:both;"></div>
     <menu>
-        <ul>
-            <li> <span>My books</span></li>  
-            <li> 
-                <div class="icon-home"></div>
-                <div class="text"> Home </div>
-                <div></div>
-            </li>
-            <li>
-                <div class="icon-add"></div> 
-                <div class="text"> Novo </div>
-                 <div></div>
-            </li>
-            <li>
-                <div class="icon-list"></div> 
-                <div class="text"> Biblioteca </div> 
-                 <div></div>
-            </li>
-        </ul>
+    
     </menu>
 
     <section class="main">
 
-        <div class="post">
-        <img src="notFound.gif" alt="Joe Bloggs">
-        <div class="content-grid">
-            <div>Joe Bloggs</div>
-            <div>25th May 2013</div>
-            <div data-date="25th May 2013" data-author="JOE BLOGGS">This is the contents of my post</div>
-        </div>
+        <div class="item-list">
+            <img src="file:///android_asset/notFound.gif" class="image-book">
+            <div class="content-grid">
+                <div>Joe Bloggs</div>
+                <div>25th May 2013</div>
+                <div data-date="25th May 2013" data-author="JOE BLOGGS">This is the contents of my post</div>
+            </div>
         </div>
 
 
